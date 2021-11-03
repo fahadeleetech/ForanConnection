@@ -14,6 +14,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 public class Base {
 	public static AppiumDriverLocalService service;
 	
+	// This method will start the server and if it is already running that it will return the started service
 	public AppiumDriverLocalService startServer()
 	{
 		boolean flag = checkIfServerIsRunning(4723);
@@ -25,6 +26,7 @@ public class Base {
 		return service;
 	}
 	
+	// This method will check if server is running or not
 	public static boolean checkIfServerIsRunning(int port) 
 	{
 		boolean isServerRunning = false;
@@ -46,12 +48,14 @@ public class Base {
 		return isServerRunning;		
 	}
 
+	// This method will start the emulator
 	public static void startEmulator() throws IOException, InterruptedException
 	{
 		Runtime.getRuntime().exec(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\startEmulator.bat");
 		Thread.sleep(6000);
 	}
 	
+	// This method will give capabilities to the driver and tells which application to start
 	public static AndroidDriver<AndroidElement> capabilities(String appName) throws IOException, InterruptedException
 	{
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\AndroidAppA\\AppiumFramework\\global.properties");
@@ -82,6 +86,3 @@ public class Base {
 	}
 
 }
-
-//command to kill all the ports, open cmd and paste this command
-// taskkill /F /IM node.exe

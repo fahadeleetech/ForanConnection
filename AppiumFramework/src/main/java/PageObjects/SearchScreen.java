@@ -1,5 +1,7 @@
 package PageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,16 +17,26 @@ public class SearchScreen {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	@AndroidFindBy(xpath = "//android.widget.EditText[@text='Email']")
-	public WebElement emailField;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Around me']")
+	public WebElement aroundMeIcon;
 	
-	@AndroidFindBy(xpath = "//android.widget.EditText[@text='Password']")
-	public WebElement passwordField;
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/et_search")
+	public WebElement searchField;
 	
-	@AndroidFindBy(xpath = "//android.widget.Button[@text='Login']")
-	public WebElement loginBtn;
+	@AndroidFindBy(xpath = "//android.widget.TextView[@index='0']")
+	public WebElement firstSearchSuggestion;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Login']")
-	public WebElement loginPopup;
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/name")
+	public List<WebElement> displayedCategories;
+	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/recyclerView")
+	public List<WebElement> displayedVendors;
+	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/et_search")
+	public WebElement searchedText;
+	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/tv_sp_name")
+	public WebElement firstSearchedCard;
+	
 
 }

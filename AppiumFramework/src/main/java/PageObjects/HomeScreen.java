@@ -30,5 +30,8 @@ public class HomeScreen {
 	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/rel_left_half")
 	public WebElement luhfuBtn;
 	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Electrician']")
+	public WebElement electricianIcon;
+	
 
 }

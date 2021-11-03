@@ -5,9 +5,12 @@
     <classes>
       <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
         <methods>
-          <include name="profileManagement"/>
+          <include name="homeAddressSetting"/>
+          <include name="searchByCategory"/>
+          <include name="searchByTyping"/>
           <include name="setUp"/>
-          <include name="login"/>
+          <include name="customAddressSetting"/>
+          <include name="workAddressSetting"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- AndroidAppA.AppiumFramework.SmokeTestScenarios -->

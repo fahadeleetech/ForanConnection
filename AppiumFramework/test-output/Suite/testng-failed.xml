@@ -3,11 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="AndroidAppA.AppiumFramework.UserLogin">
+      <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
         <methods>
-          <include name="Login"/>
+          <include name="homeAddressSetting"/>
+          <include name="profileManagement"/>
+          <include name="searchByCategory"/>
+          <include name="searchByTyping"/>
+          <include name="setUp"/>
+          <include name="customAddressSetting"/>
+          <include name="workAddressSetting"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- AndroidAppA.AppiumFramework.UserLogin -->
+      </class> <!-- AndroidAppA.AppiumFramework.SmokeTestScenarios -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

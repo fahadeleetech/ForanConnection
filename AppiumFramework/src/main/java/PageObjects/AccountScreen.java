@@ -21,6 +21,9 @@ public class AccountScreen {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Address']")
 	public WebElement addressBtn;
 	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/linear_back")
+	public WebElement backBtn;
+	
 	
 
 }

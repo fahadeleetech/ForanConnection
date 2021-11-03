@@ -1,14 +1,13 @@
 package AndroidAppA.AppiumFramework;
 import java.io.IOException;
+import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-//import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import PageObjects.AccountScreen;
@@ -17,6 +16,7 @@ import PageObjects.HomeScreen;
 import PageObjects.IntroScreen;
 import PageObjects.LoginScreen;
 import PageObjects.SavedPlacesScreen;
+import PageObjects.SearchScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -28,6 +28,7 @@ public class SmokeTestScenarios extends Base{
 	public static AccountScreen account;
 	public static EditProfileScreen userProfile;
 	public static SavedPlacesScreen address;
+	public static SearchScreen search;
 	
 	@BeforeClass
 	public void setUp() throws IOException, InterruptedException
@@ -42,10 +43,12 @@ public class SmokeTestScenarios extends Base{
 		login = new LoginScreen(driver);
 		account = new AccountScreen(driver);
 		userProfile = new EditProfileScreen(driver);
+		search = new SearchScreen(driver);
+		address = new SavedPlacesScreen(driver);
 		
 	}
 
-	@Test
+	@Test (priority=1)
 	public void login()
 		{
 			intro.skipBtn.click();
@@ -59,8 +62,9 @@ public class SmokeTestScenarios extends Base{
 				{
 					login.loginBtn.click();
 				}
-			//WebDriverWait waitLoginBtn = new WebDriverWait(driver, 2);
-			//waitLoginBtn.until(ExpectedConditions.invisibilityOfElementLocated((By) login.loginBtn.));
+
+			WebDriverWait waitprofileIcon = new WebDriverWait(driver, 5);
+			waitprofileIcon.until(ExpectedConditions.elementToBeClickable(home.profileIcon));
 			
 			home.profileIcon.click();
 			home.introShowCase.click();
@@ -71,11 +75,11 @@ public class SmokeTestScenarios extends Base{
 	
 			
 	
-	@Test
+	@Test (priority=2)
 	public void profileManagement()
-		{				
+		{
 			userProfile.firstName.clear();
-			userProfile.firstName.sendKeys("Bilal1");
+			userProfile.firstName.sendKeys("Bilal "+LocalTime.now().getSecond());
 			userProfile.lastName.clear();
 			userProfile.lastName.sendKeys("Ashraf1");
 			userProfile.mobileNumber.clear();
@@ -90,25 +94,27 @@ public class SmokeTestScenarios extends Base{
 			userProfile.backBtn.click();
 			account.profileImage.click();
 			
-			String fNameVerification = userProfile.firstName.getAttribute("text");
-			Assert.assertEquals("Bilal1", fNameVerification);
-			
 			String lNameVerification = userProfile.lastName.getAttribute("text");
 			Assert.assertEquals("Ashraf1", lNameVerification);
 			
 			String mobileNumberVerification = userProfile.mobileNumber.getAttribute("text");
 			Assert.assertEquals("3214204301", mobileNumberVerification);
+			
 		}
 	
-	@Test
+	@Test (priority=3)
 	public void homeAddressSetting()
-		{				
+		{			
 			userProfile.backBtn.click();
 			account.addressBtn.click();
+			
+			WebDriverWait homeBtn = new WebDriverWait(driver, 5);
+			homeBtn.until(ExpectedConditions.elementToBeClickable(address.homeBtn));
+			
 			address.homeBtn.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.locationSearchField.sendKeys("iqbal town");
+			address.editlocationSearchField.sendKeys("iqbal town");
 			address.locationSelection.click();
 			address.confirmBtn.click();
 			
@@ -121,13 +127,13 @@ public class SmokeTestScenarios extends Base{
 			Assert.assertEquals("Home updated successfully.", homeAddressUpdateMessage);
 		}
 	
-	@Test
+	@Test (priority=4)
 	public void workAddressSetting() 
 		{
 			address.workBtn.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.locationSearchField.sendKeys("awan town");
+			address.editlocationSearchField.sendKeys("awan town");
 			address.locationSelection.click();
 			address.confirmBtn.click();	
 			
@@ -141,13 +147,13 @@ public class SmokeTestScenarios extends Base{
 				
 		}
 	
-	@Test
+	@Test (priority=5)
 	public void customAddressSetting()
 		{
 			address.addNewAddressIcon.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.locationSearchField.sendKeys("sabzazar");
+			address.editlocationSearchField.sendKeys("sabzazar");
 			address.locationSelection.click();
 			address.confirmBtn.click();	
 			address.addCustomAddressName.click();
@@ -164,7 +170,63 @@ public class SmokeTestScenarios extends Base{
 			String customAddressVerification = address.addedCustomAddressName.getAttribute("text");
 			Assert.assertEquals("testHome1", customAddressVerification);
 			
+			address.verticalDots.click();
+			address.removeBtn.click();
+			address.yesBtn.click();
+			
+			//String locationDeletedMessage = address.locationDeletedToastMessage.getAttribute("name");
+			//Assert.assertEquals("Location Deleted!", locationDeletedMessage);
+			
 		
+		}
+	
+	@Test (priority=6)
+	public void searchByCategory()
+		{
+		   WebDriverWait waitbackBtn = new WebDriverWait(driver, 7);
+		   waitbackBtn.until(ExpectedConditions.elementToBeClickable(address.backBtn));
+		
+			address.backBtn.click();
+			account.backBtn.click();
+			home.electricianIcon.click();
+			search.aroundMeIcon.click();
+			home.introShowCase.click();
+			address.homeBtn.click();
+			
+			int electricianCategoryCount = 0;
+			int allCategoryCount = search.displayedCategories.size();
+			int vendorCount = search.displayedVendors.size();
+			for (int i = 0; i< allCategoryCount; i++)
+				{
+					String text = search.displayedCategories.get(i).getText();
+						if(text.equalsIgnoreCase("Electrician"))
+							{
+								electricianCategoryCount++;
+							}
+						else
+							{
+								continue;
+							}
+				}
+			Assert.assertEquals(vendorCount, electricianCategoryCount);
+						
+		}
+	
+	@Test (priority=7)
+	public void searchByTyping()
+		{
+			search.searchField.clear();
+			search.searchField.sendKeys("Madina traders");
+			
+			WebDriverWait waitVendor = new WebDriverWait(driver, 7);
+			waitVendor.until(ExpectedConditions.elementToBeClickable(search.firstSearchSuggestion));
+			
+			search.firstSearchSuggestion.click();
+			
+			String searchedVendorText = search.searchedText.getAttribute("text");
+			String searchedVendorVerification = search.firstSearchedCard.getAttribute("text");
+			Assert.assertEquals(searchedVendorText, searchedVendorVerification);
+			
 		}
 	
 	@AfterClass
@@ -172,6 +234,4 @@ public class SmokeTestScenarios extends Base{
 	{
 		service.stop();
 	}
-	
-
 }

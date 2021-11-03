@@ -24,6 +24,9 @@ public class SavedPlacesScreen {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Search places']")
 	public WebElement locationSearchField;
 	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/et_search")
+	public WebElement editlocationSearchField;
+	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@index='0']")
 	public WebElement locationSelection;
 	
@@ -59,6 +62,23 @@ public class SavedPlacesScreen {
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text ='testHome1']")
 	public WebElement addedCustomAddressName;
+	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/iv_back")
+	public WebElement backBtn;
+	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/textViewOptions")
+	public WebElement verticalDots;
+	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Remove']")
+	public WebElement removeBtn;
+	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Yes']")
+	public WebElement yesBtn;
+	
+	@AndroidFindBy(xpath = "//android.widget.Toast[2]")
+	public WebElement locationDeletedToastMessage;
+	
+	
 
 	
 
