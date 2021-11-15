@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -13,6 +17,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class Base {
 	public static AppiumDriverLocalService service;
+	public static AndroidDriver<AndroidElement> driver;
 	
 	// This method will start the server and if it is already running that it will return the started service
 	public AppiumDriverLocalService startServer()
@@ -63,7 +68,7 @@ public class Base {
 		Properties prop = new Properties();
 		prop.load(fis);
 		
-		AndroidDriver<AndroidElement> driver;
+		
 		
 		File appDir = new File("src");
 		File app = new File(appDir,(String) prop.get(appName));
@@ -83,6 +88,12 @@ public class Base {
 		return driver;
 	
 
+	}
+	
+	public static void getScreenShot(String testName) throws IOException 
+	{
+		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\"+testName+".png")); 
 	}
 
 }

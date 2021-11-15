@@ -2,44 +2,44 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-03T18:41:14Z" name="Suite" finished-at="2021-11-03T18:44:05Z" duration-ms="171695">
+  <suite started-at="2021-11-15T18:55:31 PKT" name="Suite" finished-at="2021-11-15T18:58:31 PKT" duration-ms="179552">
     <groups>
     </groups>
-    <test started-at="2021-11-03T18:41:14Z" name="Test" finished-at="2021-11-03T18:44:05Z" duration-ms="171695">
+    <test started-at="2021-11-15T18:55:31 PKT" name="Test" finished-at="2021-11-15T18:58:31 PKT" duration-ms="179552">
       <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:41:14Z" name="setUp" finished-at="2021-11-03T18:41:33Z" duration-ms="19219" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:55:31 PKT" name="setUp" finished-at="2021-11-15T18:55:51 PKT" duration-ms="19504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:41:33Z" name="login" finished-at="2021-11-03T18:42:37Z" duration-ms="64112" status="PASS">
+        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:55:51 PKT" name="login" finished-at="2021-11-15T18:56:54 PKT" duration-ms="63090" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="profileManagement()[pri:2, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:42:37Z" name="profileManagement" finished-at="2021-11-03T18:42:45Z" duration-ms="8055" status="PASS">
+        <test-method signature="profileManagement()[pri:2, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:56:54 PKT" name="profileManagement" finished-at="2021-11-15T18:57:01 PKT" duration-ms="7378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profileManagement -->
-        <test-method signature="homeAddressSetting()[pri:3, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:42:45Z" name="homeAddressSetting" finished-at="2021-11-03T18:42:59Z" duration-ms="14277" status="PASS">
+        <test-method signature="homeAddressSetting()[pri:3, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:01 PKT" name="homeAddressSetting" finished-at="2021-11-15T18:57:16 PKT" duration-ms="14962" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeAddressSetting -->
-        <test-method signature="workAddressSetting()[pri:4, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:42:59Z" name="workAddressSetting" finished-at="2021-11-03T18:43:10Z" duration-ms="10221" status="PASS">
+        <test-method signature="workAddressSetting()[pri:4, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:16 PKT" name="workAddressSetting" finished-at="2021-11-15T18:57:27 PKT" duration-ms="10550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- workAddressSetting -->
-        <test-method signature="customAddressSetting()[pri:5, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:43:10Z" name="customAddressSetting" finished-at="2021-11-03T18:43:23Z" duration-ms="13241" status="PASS">
+        <test-method signature="customAddressSetting()[pri:5, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:27 PKT" name="customAddressSetting" finished-at="2021-11-15T18:57:40 PKT" duration-ms="13352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customAddressSetting -->
-        <test-method signature="searchByCategory()[pri:6, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:43:23Z" name="searchByCategory" finished-at="2021-11-03T18:44:02Z" duration-ms="39170" status="PASS">
+        <test-method signature="searchByCategory()[pri:6, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:40 PKT" name="searchByCategory" finished-at="2021-11-15T18:58:27 PKT" duration-ms="47325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchByCategory -->
-        <test-method signature="searchByTyping()[pri:7, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:44:02Z" name="searchByTyping" finished-at="2021-11-03T18:44:05Z" duration-ms="3273" status="PASS">
+        <test-method signature="searchByTyping()[pri:7, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:58:27 PKT" name="searchByTyping" finished-at="2021-11-15T18:58:31 PKT" duration-ms="3264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchByTyping -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@44d52de2]" started-at="2021-11-03T18:44:05Z" name="tearDown" finished-at="2021-11-03T18:44:05Z" duration-ms="63" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:58:31 PKT" name="tearDown" finished-at="2021-11-15T18:58:31 PKT" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
