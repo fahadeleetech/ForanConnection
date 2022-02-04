@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -17,6 +18,7 @@ import PageObjects.IntroScreen;
 import PageObjects.LoginScreen;
 import PageObjects.SavedPlacesScreen;
 import PageObjects.SearchScreen;
+import PageObjects.VendorProfileScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -29,6 +31,7 @@ public class SmokeTestScenarios extends Base{
 	public static EditProfileScreen userProfile;
 	public static SavedPlacesScreen address;
 	public static SearchScreen search;
+	public static VendorProfileScreen vendorProfile;
 	
 	@BeforeClass
 	public void setUp() throws IOException, InterruptedException
@@ -45,6 +48,7 @@ public class SmokeTestScenarios extends Base{
 		userProfile = new EditProfileScreen(driver);
 		search = new SearchScreen(driver);
 		address = new SavedPlacesScreen(driver);
+		vendorProfile = new VendorProfileScreen(driver);
 		
 	}
 
@@ -83,7 +87,7 @@ public class SmokeTestScenarios extends Base{
 			userProfile.lastName.clear();
 			userProfile.lastName.sendKeys("Ashraf1");
 			userProfile.mobileNumber.clear();
-			userProfile.mobileNumber.sendKeys("3214204301");
+			//userProfile.mobileNumber.sendKeys("3214204301");
 				if(userProfile.updateBtn.isEnabled() == true)
 				{
 					userProfile.updateBtn.click();
@@ -226,6 +230,37 @@ public class SmokeTestScenarios extends Base{
 			String searchedVendorText = search.searchedText.getAttribute("text");
 			String searchedVendorVerification = search.firstSearchedCard.getAttribute("text");
 			Assert.assertEquals(searchedVendorText, searchedVendorVerification);
+			
+		}
+	
+	@Test (priority=8)
+	public void callVendor()
+		{
+			search.firstSearchedCard.click();
+			
+			WebDriverWait waitCall = new WebDriverWait(driver, 3);
+			waitCall.until(ExpectedConditions.visibilityOf(vendorProfile.callIcon));
+			
+			String callIconVerification =vendorProfile.callIcon.getAttribute("text");
+			Assert.assertEquals("Call", callIconVerification);
+			
+			String messageIconVerification = vendorProfile.messageIcon.getAttribute("text");
+			Assert.assertEquals("Message", messageIconVerification);
+			
+			String reviewIconVerification = vendorProfile.reviewIcon.getAttribute("text");
+			Assert.assertEquals("Review", reviewIconVerification);
+			
+			vendorProfile.callIcon.click();
+			driver.findElementByXPath("//android.widget.Button[@text='ALLOW']").click();
+			
+			
+			String callTextVerification = driver.findElement(By.id("com.el33tech.serviceproviders:id/txt_dia")).getAttribute("text");
+			//System.out.println(callTextVerification);
+			Assert.assertEquals("Please mention Foran Connection when you connect with the vendor for a possible discount", callTextVerification);
+			
+
+			driver.findElementByXPath("//android.widget.TextView[@text='Call']").click();
+			driver.findElementById("com.android.dialer:id/incall_end_call").click();
 			
 		}
 	

@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-15T18:55:31 PKT" name="Suite" finished-at="2021-11-15T18:58:31 PKT" duration-ms="179552">
+  <suite started-at="2022-02-04T15:56:52 PKT" name="Default suite" finished-at="2022-02-04T15:59:54 PKT" duration-ms="181889">
     <groups>
     </groups>
-    <test started-at="2021-11-15T18:55:31 PKT" name="Test" finished-at="2021-11-15T18:58:31 PKT" duration-ms="179552">
+    <test started-at="2022-02-04T15:56:52 PKT" name="Default test" finished-at="2022-02-04T15:59:54 PKT" duration-ms="181889">
       <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:55:31 PKT" name="setUp" finished-at="2021-11-15T18:55:51 PKT" duration-ms="19504" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:56:52 PKT" name="setUp" finished-at="2022-02-04T15:57:16 PKT" duration-ms="23179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:55:51 PKT" name="login" finished-at="2021-11-15T18:56:54 PKT" duration-ms="63090" status="PASS">
+        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:57:16 PKT" name="login" finished-at="2022-02-04T15:58:19 PKT" duration-ms="63093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="profileManagement()[pri:2, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:56:54 PKT" name="profileManagement" finished-at="2021-11-15T18:57:01 PKT" duration-ms="7378" status="PASS">
+        <test-method signature="profileManagement()[pri:2, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:58:19 PKT" name="profileManagement" finished-at="2022-02-04T15:58:25 PKT" duration-ms="6086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profileManagement -->
-        <test-method signature="homeAddressSetting()[pri:3, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:01 PKT" name="homeAddressSetting" finished-at="2021-11-15T18:57:16 PKT" duration-ms="14962" status="PASS">
+        <test-method signature="homeAddressSetting()[pri:3, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:58:25 PKT" name="homeAddressSetting" finished-at="2022-02-04T15:58:39 PKT" duration-ms="13894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeAddressSetting -->
-        <test-method signature="workAddressSetting()[pri:4, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:16 PKT" name="workAddressSetting" finished-at="2021-11-15T18:57:27 PKT" duration-ms="10550" status="PASS">
+        <test-method signature="workAddressSetting()[pri:4, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:58:39 PKT" name="workAddressSetting" finished-at="2022-02-04T15:58:50 PKT" duration-ms="10836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- workAddressSetting -->
-        <test-method signature="customAddressSetting()[pri:5, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:27 PKT" name="customAddressSetting" finished-at="2021-11-15T18:57:40 PKT" duration-ms="13352" status="PASS">
+        <test-method signature="customAddressSetting()[pri:5, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:58:50 PKT" name="customAddressSetting" finished-at="2022-02-04T15:59:06 PKT" duration-ms="15860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- customAddressSetting -->
-        <test-method signature="searchByCategory()[pri:6, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:57:40 PKT" name="searchByCategory" finished-at="2021-11-15T18:58:27 PKT" duration-ms="47325" status="PASS">
+        <test-method signature="searchByCategory()[pri:6, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:59:06 PKT" name="searchByCategory" finished-at="2022-02-04T15:59:44 PKT" duration-ms="38185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchByCategory -->
-        <test-method signature="searchByTyping()[pri:7, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:58:27 PKT" name="searchByTyping" finished-at="2021-11-15T18:58:31 PKT" duration-ms="3264" status="PASS">
+        <test-method signature="searchByTyping()[pri:7, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:59:44 PKT" name="searchByTyping" finished-at="2022-02-04T15:59:47 PKT" duration-ms="3239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchByTyping -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@53aac487]" started-at="2021-11-15T18:58:31 PKT" name="tearDown" finished-at="2021-11-15T18:58:31 PKT" duration-ms="59" status="PASS">
+        <test-method signature="callVendor()[pri:8, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:59:47 PKT" name="callVendor" finished-at="2022-02-04T15:59:54 PKT" duration-ms="7182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- callVendor -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AndroidAppA.AppiumFramework.SmokeTestScenarios@7db12bb6]" started-at="2022-02-04T15:59:54 PKT" name="tearDown" finished-at="2022-02-04T15:59:54 PKT" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AndroidAppA.AppiumFramework.SmokeTestScenarios -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -93,7 +93,7 @@ public class Base {
 	public static void getScreenShot(String testName) throws IOException 
 	{
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\"+testName+".png")); 
+		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\"+testName+".png"));	 
 	}
 
 }

@@ -3,18 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="resources.Listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
         <methods>
-          <include name="login"/>
-          <include name="homeAddressSetting"/>
           <include name="searchByCategory"/>
           <include name="searchByTyping"/>
-          <include name="profileManagement"/>
-          <include name="customAddressSetting"/>
-          <include name="workAddressSetting"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
