@@ -1,5 +1,7 @@
 ****Foran Connection Mobile AppA Automation Configurations:****
+
 **Download and Installation:**
+
 Download Java JDK 1.8.0.301 from Java Website. Install and set Environment Variable into Advanced System Settings → Environment Variables → Make New Java_home in System Variables and set this Path (C:\Program Files\Java\jdk1.8.0_301).
 
 Download Eclipse Version into your system to automate the Test Scripts.
@@ -21,7 +23,7 @@ Start your AVD Emulator.
 Start your Eclipse version and Make a new project with Base/Home Class. 
 
 
-Base Class:
+**Base Class:**
 
 import java.io.File;
 
@@ -103,7 +105,7 @@ return driver;
 
 
 
-Login Page Code of Let Us Hire for You.
+**Login Page Code of Let Us Hire for You.**
 
 import java.net.MalformedURLException;
 
