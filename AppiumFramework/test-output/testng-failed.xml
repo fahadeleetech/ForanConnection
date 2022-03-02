@@ -3,16 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios">
+      <class name="AndroidAppA.AppiumFramework.WalkThroughScreens">
         <methods>
-          <include name="searchByCategory"/>
-          <include name="searchByTyping"/>
-          <include name="customAddressSetting"/>
-          <include name="callVendor"/>
-          <include name="tearDown"/>
+          <include name="WalkThroughScreen"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- AndroidAppA.AppiumFramework.SmokeTestScenarios -->
+      </class> <!-- AndroidAppA.AppiumFramework.WalkThroughScreens -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

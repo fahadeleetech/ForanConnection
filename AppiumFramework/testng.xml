@@ -8,6 +8,7 @@
   <test name="Test">
     <classes>
       <class name="AndroidAppA.AppiumFramework.SmokeTestScenarios"/>
+      <class name="AndroidAppA.AppiumFramework.HomeScreenTestCases"/>
     </classes>
   </test>
 </suite> 

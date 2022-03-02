@@ -11,6 +11,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class SearchScreen {
+	public String serviceProvider = "Madina traders";
 	
 	public SearchScreen(AndroidDriver<AndroidElement> driver)
 	{

@@ -1,5 +1,7 @@
 package PageObjects;
 
+import java.time.LocalTime;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,6 +11,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class EditProfileScreen {
+public String fName = "Bilal "+LocalTime.now().getSecond();
+public String lName = "Ashraf1";
+public String mNumber = "3214204308";
 	
 	public EditProfileScreen(AndroidDriver<AndroidElement> driver)
 	{

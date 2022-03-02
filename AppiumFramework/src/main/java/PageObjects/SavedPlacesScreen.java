@@ -9,6 +9,10 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class SavedPlacesScreen {
+	public String homeAddress = "iqbal town";
+	public String workAddress = "awan town";
+	public String customAddress = "sabzazar";
+	public String customAddressName = "testHome1";
 	
 	public SavedPlacesScreen(AndroidDriver<AndroidElement> driver)
 	{

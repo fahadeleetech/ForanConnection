@@ -9,6 +9,8 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LoginScreen {
+	public String email = "fadiformanite@gmail.com";
+	public String password = "webdir123R!";
 	
 	public LoginScreen(AndroidDriver<AndroidElement> driver)
 	{

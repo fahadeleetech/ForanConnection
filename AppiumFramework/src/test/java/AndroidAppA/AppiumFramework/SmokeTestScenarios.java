@@ -1,9 +1,6 @@
 package AndroidAppA.AppiumFramework;
 import java.io.IOException;
-import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -60,8 +57,8 @@ public class SmokeTestScenarios extends Base{
 			home.introShowCase.click();
 			home.profileIcon.click();
 			home.loginPopup.click();
-			login.emailField.sendKeys("fadiformanite@gmail.com");
-			login.passwordField.sendKeys("webdir123R@");
+			login.emailField.sendKeys(login.email);
+			login.passwordField.sendKeys(login.password);
 			if(login.loginBtn.isEnabled() == true)
 				{
 					login.loginBtn.click();
@@ -74,7 +71,7 @@ public class SmokeTestScenarios extends Base{
 			home.introShowCase.click();
 			account.profileImage.click();
 			String loginCheck = userProfile.emailAddress.getAttribute("text");
-			Assert.assertEquals("fadiformanite@gmail.com", loginCheck);
+			Assert.assertEquals(login.email, loginCheck);
 		}
 	
 			
@@ -83,11 +80,9 @@ public class SmokeTestScenarios extends Base{
 	public void profileManagement()
 		{
 			userProfile.firstName.clear();
-			userProfile.firstName.sendKeys("Bilal "+LocalTime.now().getSecond());
+			userProfile.firstName.sendKeys(userProfile.fName);
 			userProfile.lastName.clear();
-			userProfile.lastName.sendKeys("Ashraf1");
-			userProfile.mobileNumber.clear();
-			//userProfile.mobileNumber.sendKeys("3214204301");
+			userProfile.lastName.sendKeys(userProfile.lName);
 				if(userProfile.updateBtn.isEnabled() == true)
 				{
 					userProfile.updateBtn.click();
@@ -99,10 +94,10 @@ public class SmokeTestScenarios extends Base{
 			account.profileImage.click();
 			
 			String lNameVerification = userProfile.lastName.getAttribute("text");
-			Assert.assertEquals("Ashraf1", lNameVerification);
+			Assert.assertEquals(userProfile.lName, lNameVerification);
 			
 			String mobileNumberVerification = userProfile.mobileNumber.getAttribute("text");
-			Assert.assertEquals("3214204301", mobileNumberVerification);
+			Assert.assertEquals(userProfile.mNumber, mobileNumberVerification);
 			
 		}
 	
@@ -118,7 +113,7 @@ public class SmokeTestScenarios extends Base{
 			address.homeBtn.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.editlocationSearchField.sendKeys("iqbal town");
+			address.editlocationSearchField.sendKeys(address.homeAddress);
 			address.locationSelection.click();
 			address.confirmBtn.click();
 			
@@ -137,7 +132,7 @@ public class SmokeTestScenarios extends Base{
 			address.workBtn.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.editlocationSearchField.sendKeys("awan town");
+			address.editlocationSearchField.sendKeys(address.workAddress);
 			address.locationSelection.click();
 			address.confirmBtn.click();	
 			
@@ -157,11 +152,11 @@ public class SmokeTestScenarios extends Base{
 			address.addNewAddressIcon.click();
 			address.adjustMapBtn.click();
 			address.locationSearchField.click();
-			address.editlocationSearchField.sendKeys("sabzazar");
+			address.editlocationSearchField.sendKeys(address.customAddress);
 			address.locationSelection.click();
 			address.confirmBtn.click();	
 			address.addCustomAddressName.click();
-			address.addCustomAddressName.sendKeys("testHome1");
+			address.addCustomAddressName.sendKeys(address.customAddressName);
 			
 			WebDriverWait waitCustom = new WebDriverWait(driver, 5);
 			waitCustom.until(ExpectedConditions.elementToBeClickable(address.addPlaceBtn));
@@ -172,14 +167,11 @@ public class SmokeTestScenarios extends Base{
 			Assert.assertEquals("Location added to saved places.", customAddressUpdateMessage);
 			
 			String customAddressVerification = address.addedCustomAddressName.getAttribute("text");
-			Assert.assertEquals("testHome1", customAddressVerification);
+			Assert.assertEquals(address.customAddressName, customAddressVerification);
 			
 			address.verticalDots.click();
 			address.removeBtn.click();
 			address.yesBtn.click();
-			
-			//String locationDeletedMessage = address.locationDeletedToastMessage.getAttribute("name");
-			//Assert.assertEquals("Location Deleted!", locationDeletedMessage);
 			
 		
 		}
@@ -187,7 +179,7 @@ public class SmokeTestScenarios extends Base{
 	@Test (priority=6)
 	public void searchByCategory()
 		{
-		   WebDriverWait waitbackBtn = new WebDriverWait(driver, 7);
+		   WebDriverWait waitbackBtn = new WebDriverWait(driver, 10);
 		   waitbackBtn.until(ExpectedConditions.elementToBeClickable(address.backBtn));
 		
 			address.backBtn.click();
@@ -220,7 +212,7 @@ public class SmokeTestScenarios extends Base{
 	public void searchByTyping()
 		{
 			search.searchField.clear();
-			search.searchField.sendKeys("Madina traders");
+			search.searchField.sendKeys(search.serviceProvider);
 			
 			WebDriverWait waitVendor = new WebDriverWait(driver, 7);
 			waitVendor.until(ExpectedConditions.elementToBeClickable(search.firstSearchSuggestion));
@@ -251,16 +243,13 @@ public class SmokeTestScenarios extends Base{
 			Assert.assertEquals("Review", reviewIconVerification);
 			
 			vendorProfile.callIcon.click();
-			driver.findElementByXPath("//android.widget.Button[@text='ALLOW']").click();
+			vendorProfile.allowPopup.click();
 			
+			String callTextVerification = vendorProfile.confirmPopup.getAttribute("text");
+			Assert.assertEquals(vendorProfile.confirmPopupText, callTextVerification);
 			
-			String callTextVerification = driver.findElement(By.id("com.el33tech.serviceproviders:id/txt_dia")).getAttribute("text");
-			//System.out.println(callTextVerification);
-			Assert.assertEquals("Please mention Foran Connection when you connect with the vendor for a possible discount", callTextVerification);
-			
-
-			driver.findElementByXPath("//android.widget.TextView[@text='Call']").click();
-			driver.findElementById("com.android.dialer:id/incall_end_call").click();
+			vendorProfile.confirmPopupCallBtn.click();
+			vendorProfile.endCallBtn.click();
 			
 		}
 	
