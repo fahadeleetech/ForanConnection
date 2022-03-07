@@ -39,5 +39,13 @@ public class SearchScreen {
 	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/tv_sp_name")
 	public WebElement firstSearchedCard;
 	
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/linear_search")
+	public WebElement HomeSearchbar;
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/imageViewShowCaseClose")
+	public WebElement Aroundmeshowcase;
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/linear_home")
+	public WebElement HomeAddress;
+	@AndroidFindBy(id = "com.el33tech.serviceproviders:id/name")
+	public WebElement vendorname;
 
 }
