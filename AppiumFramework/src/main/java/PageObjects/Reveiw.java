@@ -1,18 +1,18 @@
 package PageObjects;
-
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
-import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Reveiw {
+	public String ReviewEmail = "aqtesting2524@gmail.com";
+	public String ReviewPassword = "12345@Azs";
+	public String ReviewName = "haseeb test";
+	public String Amount = "1233";
+	public String Comment = "Great Work";
+	public String ratingdigit = "9.0";
 //com.el33tech.serviceproviders:id/iv_review
 	public Reveiw(AndroidDriver<AndroidElement> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);

@@ -1,61 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-07T22:05:13 PKT" name="Default suite" finished-at="2022-03-07T22:07:52 PKT" duration-ms="158492">
+  <suite started-at="2022-03-11T13:20:31 PKT" name="Default suite" finished-at="2022-03-11T13:22:25 PKT" duration-ms="114373">
     <groups>
     </groups>
-    <test started-at="2022-03-07T22:05:13 PKT" name="Default test" finished-at="2022-03-07T22:07:52 PKT" duration-ms="158492">
-      <class name="AndroidAppA.AppiumFramework.ReviewTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:05:14 PKT" name="setUp" finished-at="2022-03-07T22:06:04 PKT" duration-ms="49767" status="PASS">
+    <test started-at="2022-03-11T13:20:31 PKT" name="Default test" finished-at="2022-03-11T13:22:25 PKT" duration-ms="114373">
+      <class name="AndroidAppA.AppiumFramework.JobCreation">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:20:31 PKT" name="setUp" finished-at="2022-03-11T13:20:53 PKT" duration-ms="22569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:06:04 PKT" name="login" finished-at="2022-03-07T22:06:39 PKT" duration-ms="35819" status="PASS">
+        <test-method signature="login()[pri:1, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:20:53 PKT" name="login" finished-at="2022-03-11T13:21:25 PKT" duration-ms="31604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="search()[pri:2, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:06:40 PKT" name="search" finished-at="2022-03-07T22:07:15 PKT" duration-ms="35771" status="PASS">
+        <test-method signature="luhfuStep1()[pri:2, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:21:25 PKT" name="luhfuStep1" finished-at="2022-03-11T13:21:35 PKT" duration-ms="10272" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method signature="catagory()[pri:3, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:15 PKT" name="catagory" finished-at="2022-03-07T22:07:23 PKT" duration-ms="8057" status="PASS">
+        </test-method> <!-- luhfuStep1 -->
+        <test-method signature="luhfuStep2()[pri:3, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:21:35 PKT" name="luhfuStep2" finished-at="2022-03-11T13:21:39 PKT" duration-ms="3456" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- catagory -->
-        <test-method signature="completiondate()[pri:4, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:23 PKT" name="completiondate" finished-at="2022-03-07T22:07:27 PKT" duration-ms="3189" status="PASS">
+        </test-method> <!-- luhfuStep2 -->
+        <test-method signature="luhfuStep3()[pri:4, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:21:39 PKT" name="luhfuStep3" finished-at="2022-03-11T13:22:21 PKT" duration-ms="41955" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- completiondate -->
-        <test-method signature="amount()[pri:5, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:27 PKT" name="amount" finished-at="2022-03-07T22:07:30 PKT" duration-ms="3785" status="PASS">
+        </test-method> <!-- luhfuStep3 -->
+        <test-method signature="luhfuStep4()[pri:5, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:22:21 PKT" name="luhfuStep4" finished-at="2022-03-11T13:22:23 PKT" duration-ms="2080" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- amount -->
-        <test-method signature="comment()[pri:6, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:30 PKT" name="comment" finished-at="2022-03-07T22:07:34 PKT" duration-ms="3689" status="PASS">
+        </test-method> <!-- luhfuStep4 -->
+        <test-method signature="luhfuStep5()[pri:6, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:22:23 PKT" name="luhfuStep5" finished-at="2022-03-11T13:22:23 PKT" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- comment -->
-        <test-method signature="scroll()[pri:7, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:34 PKT" name="scroll" finished-at="2022-03-07T22:07:43 PKT" duration-ms="8620" status="PASS">
+        </test-method> <!-- luhfuStep5 -->
+        <test-method signature="confirmationpopup()[pri:7, instance:AndroidAppA.AppiumFramework.JobCreation@53ce1329]" started-at="2022-03-11T13:22:23 PKT" name="confirmationpopup" finished-at="2022-03-11T13:22:25 PKT" duration-ms="1708" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- scroll -->
-        <test-method signature="stars()[pri:8, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:43 PKT" name="stars" finished-at="2022-03-07T22:07:47 PKT" duration-ms="4167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stars -->
-        <test-method signature="submit()[pri:9, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:47 PKT" name="submit" finished-at="2022-03-07T22:07:47 PKT" duration-ms="195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submit -->
-        <test-method signature="confirmreview()[pri:10, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:47 PKT" name="confirmreview" finished-at="2022-03-07T22:07:48 PKT" duration-ms="1143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirmreview -->
-        <test-method signature="verify()[pri:11, instance:AndroidAppA.AppiumFramework.ReviewTest@32502377]" started-at="2022-03-07T22:07:48 PKT" name="verify" finished-at="2022-03-07T22:07:52 PKT" duration-ms="3667" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify -->
-      </class> <!-- AndroidAppA.AppiumFramework.ReviewTest -->
+        </test-method> <!-- confirmationpopup -->
+      </class> <!-- AndroidAppA.AppiumFramework.JobCreation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

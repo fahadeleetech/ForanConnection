@@ -1,8 +1,5 @@
 package AndroidAppA.AppiumFramework;
 //import static org.testng.Assert.assertEquals;
-
-import static java.time.Duration.ofMillis;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -68,8 +65,8 @@ public class ReviewTest extends Base {
 		home.introShowCase.click();
 		home.profileIcon.click();
 		home.loginPopup.click();
-		login.emailField.sendKeys("aqtesting2524@gmail.com");
-		login.passwordField.sendKeys("12345@Azs");
+		login.emailField.sendKeys(review.ReviewEmail);
+		login.passwordField.sendKeys(review.ReviewPassword);
 		if(login.loginBtn.isEnabled() == true)
 			{
 				login.loginBtn.click();
@@ -81,7 +78,7 @@ public void search() {
 	searchbar.aroundMeIcon.click();
 	searchbar.Aroundmeshowcase.click();
 	searchbar.HomeAddress.click();
-	searchbar.searchedText.sendKeys("haseeb test");
+	searchbar.searchedText.sendKeys(review.ReviewName);
 	String searchvendor = searchbar.searchedText.getAttribute("text");
 	String searchsuggestion = searchbar.vendorname.getAttribute("text");
 	
@@ -114,7 +111,7 @@ public void amount()
 {
 	review.costofproject.click();
 	review.price.clear();
-	review.price.sendKeys("1000");
+	review.price.sendKeys(review.Amount);
 	review.costofproject.click();
 }
 @Test(priority =6) 
@@ -122,14 +119,14 @@ public void comment()
 {
 	review.addcomment.click();
 	review.comment.clear();
-	review.comment.sendKeys("Great Work");
+	review.comment.sendKeys(review.Comment);
 	review.addcomment.click();
 }
 @Test(priority =7) 
 public void scroll()
 {
 
-	WebElement sc=driver.findElementByXPath("//android.widget.ScrollView[@bounds='[28,476][1052,1714]']");
+	WebElement sc=driver.findElementByXPath("//android.widget.ScrollView[@bounds='[25,433][1055,1590]']");
 	Dimension dm = sc.getSize();
 	int startX = (int) (dm.width*0.5); 
 	int startY = (int) (dm.height*0.8); 
@@ -150,7 +147,7 @@ public void stars()
 {
 	//review.ratingbar.click();
 	//review.ratingbar.clear();
-	review.ratingbar.sendKeys("9.0");
+	review.ratingbar.sendKeys(review.ratingdigit);
 	review.ratingbar.click();
 }
 @Test(priority =9) 
